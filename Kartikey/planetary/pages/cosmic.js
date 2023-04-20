@@ -31,10 +31,10 @@ export default function Cosmic(){
      }
 
     return(
-<div>
+<div className="h-screen bg-[url('../public/stars.jpg')] bg-contain ">
     <Navbar/>
-    <div className="bg-contain  flex flex-col w-screen h-screen bg-[url('../public/stars.jpg')]">
-    <div className="flex justify-center">
+    <div className=" flex flex-col w-screen">
+    <div className="flex justify-center mt-5">
     <input className="xl:px-5 h-20 rounded-3xl mx-1 text-xl xl:mx-5 xl:text-5xl" type="date" onChange={handleChange}></input>
     <button onClick={giveDOB} className="h-20 hover:scale-105 text-white mx-1 xl:mx-5 border-2 font-semibold border-white rounded-3xl text-xl xl:text-3xl px-5 py-2" >Submit Date</button>
     </div>

@@ -65,7 +65,7 @@ export default function Landing() {
         Asteroid Proximity Monitor
       </h1>
       <h2 className="text-white mx-2 mt-4 z-20 xl:mx-10 xl:mt-8  xl:w-[900px] xl:text-5xl text-xl font-Lato ">
-      Allows you to stay up-to-date on the latest asteroids approaching Earth! Our unique tool generates a comprehensive list of asteroids, ordered from closest to farthest, so you can easily keep track of any potential threats.<br/> 
+      Allows you to stay up-to-date on the latest asteroids approaching Earth! Our unique tool generates a comprehensive list of asteroids so you can easily keep track of any potential threats.<br/> 
         </h2>
         <h2 className="text-white mx-2 mb-5 mt-4 z-20 xl:mx-10 xl:mt-8   xl:w-[900px] xl:text-5xl text-xl font-Lato "> Whether you're an astronomy enthusiast or just want to stay informed, our asteroid tracker is the perfect tool for staying up-to-date on space hazards.</h2>
         </div>
