@@ -4,6 +4,7 @@ const nextConfig = {
 }
 
 module.exports = {
-  // Enable CSS modules for all files
-  cssModules: true
+  images: {
+    domains: ['apod.nasa.gov'],
+  },
 }

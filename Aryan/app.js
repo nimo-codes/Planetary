@@ -33,7 +33,7 @@ app.post('/DOB', async(req, res) => {
             data1: response1,
         };
 
-        console.log(data.data1.data[0].hdurl);
+        console.log(response1.data[0].hdurl);
 
     } catch(error) {
         console.log(error);

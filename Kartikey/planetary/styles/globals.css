@@ -6,35 +6,19 @@
 
 @media screen and (min-width:600px) {   
     model-viewer{
-        right: 100px;
-        position: absolute;
         width: 500px;
         height: 500px;
     }
 }
 @media screen and (max-width:600px) {   
     model-viewer{
-        margin-top: 100px;
-        left: 1px;
-        position: absolute;
         width: 500px;
         height: 500px;
     }
 }
 @media screen and (min-width:1000px) {   
     model-viewer{
-        top:100px;
-        right: 100px;
-        position: absolute;
-        width: 900px;
-        height: 900px;
-    }
-}
-
-@media screen and (min-width:1000px) {   
-    .astro{
-        bottom:0px;
-        right: 100px;
+        
         width: 900px;
         height: 900px;
     }

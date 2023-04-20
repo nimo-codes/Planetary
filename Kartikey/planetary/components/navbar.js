@@ -19,7 +19,7 @@ export default function Navbar(){
         setImage(planetarr[number])
     }
     return (
-        <div className="z-30 top-0 sticky flex justify-between items-center w-full h-24 bg-black">
+        <div className="z-30 top-0 sticky flex justify-between items-center w-screen h-24 bg-black">
             <div onClick={logo} className="select-none cursor-pointer flex mx-5 xl:mx-8 items-center hover:scale-105">
             <Image className="w-10 h-10   xl:w-14 xl:h-14" src={image}></Image>
             <h1 className=" mx-3 xl:mx-5 text-2xl xl:text-5xl font-Orbitron text-white"> Planetary </h1>
