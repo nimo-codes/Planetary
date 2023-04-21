@@ -10,6 +10,9 @@ export default function Landing() {
     const goToAsteroid = () => {
       router.push('/asteroid')
   }
+  const goToWildFire = () => {
+    router.push('/wildfire')
+}
   return (
     <div className=" bg-[url('../public/stars.jpg')] h-full pt-16 w-full relative bg-contain">
       <div className="flex flex-col">
@@ -76,6 +79,27 @@ export default function Landing() {
           camera-controls
           auto-rotate
           src="/Asteroid.glb"
+          ></model-viewer>
+        </div>
+      </div>
+      <div className=" pt-52 pb-32  bg-[url('../public/stars.jpg')] bg-cover flex">
+        <div className="flex flex-col">
+      <h1 className="text-white  mx-2 z-20 w-full xl:mx-10 xl:text-7xl text-2xl font-semibold font-Lato">
+        {" "}
+        WildFire Prediction 
+      </h1>
+      <h2 className="text-white mx-2 mt-4 z-20 xl:mx-10 xl:mt-8  xl:w-[900px] xl:text-5xl text-xl font-Lato ">
+      The system is built on top of deep learning algorithms and uses convolutional neural networks (CNNs) to detect and classify fire images from satellite data. The model is trained on a large dataset of satellite images, which helps it to learn patterns and identify fires accurately.<br/> 
+        </h2>
+        <h2 className="text-white mx-2 mb-5 mt-4 z-20 xl:mx-10 xl:mt-8   xl:w-[900px] xl:text-5xl text-xl font-Lato "> This AI-based system has the potential to revolutionize the way we detect and respond to forest fires, as it can monitor vast areas of forests that are not easily accessible and can provide warnings that help prevent the damage caused by fires.</h2>
+        </div>
+        <div className="flex flex-col justify-evenly ml-10">
+          <button onClick={goToWildFire}  className="text-white hover:scale-105 self-center px-5 py-2 bg-teal-500 bg-opacity-50 rounded-full xl:text-4xl border-2 xl:mr-96">Check it Out!</button>
+          <model-viewer
+          disable-zoom
+          camera-controls
+          auto-rotate
+          src="/Campfire.glb"
           ></model-viewer>
         </div>
       </div>

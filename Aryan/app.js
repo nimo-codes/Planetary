@@ -63,14 +63,12 @@ axios.get(url)
 
       // Loop through the asteroids for the current date
       for (let asteroid of asteroids) {
-        const { name } = asteroid;
-
-        const { close_approach_data} = asteroid
+        const { name,close_approach_data } = asteroid;
 
         const miss_distance =
         asteroid.close_approach_data[0].miss_distance.kilometers;
 
-        console.log(`Asteroid ${name} on ${date} and the closest approach will be: ${miss_distance}`);
+        // console.log(`Asteroid ${name} on ${date} and the closest approach will be: ${miss_distance}`);
       }
     }
   })
