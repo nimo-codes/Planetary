@@ -92,19 +92,23 @@ const wildfire = () => {
       });
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-gradient-to-r from-orange-500 to-red-500   h-screen">
       <button
+        className="text-white hover:scale-105 self-center my-8 mx-5 px-5 py-2 bg-white-500 bg-opacity-50 rounded-full xl:text-xl border-2"
         onClick={(e) => {
           setShow((prev) => !prev);
         }}
       >
         SWITCH
       </button>
-      <div className="flex">
+      <div className="flex justify-center">
         {show ? (
           <>
             <form onSubmit={callNasaApi}>
-              <select onChange={(e) => setDrop(options[e.target.value])}>
+              <select
+                className="text-2xl p-2 rounded-xl"
+                onChange={(e) => setDrop(options[e.target.value])}
+              >
                 {options.map((option, index) => (
                   <option key={index} value={index}>
                     {`${option.name}`}
@@ -112,71 +116,92 @@ const wildfire = () => {
                 ))}
               </select>
 
-              <button type="submit">Submit</button>
-            </form>
-            {result ? (
-              <>
-                <h1 className="text-5xl font-semibold">{result}</h1>
-                <img
-                  className="w-[800px] mt-5"
-                  src={`http://127.0.0.1:8000${displayImage}`}
-                  alt=""
-                />
-              </>
-            ) : (
-              <h1>loading...</h1>
-            )}
-          </>
-        ) : (
-          <>
-            <form onSubmit={callNasaApi}>
-              <label className="font-semibold mx-2" htmlFor="lat">
-                latitude
-              </label>
-              <input
-                step=".001"
-                type="number"
-                name="lat"
-                onChange={(e) => setLatitude(e.target.value)}
-              />
-              <label className="mx-2 font-semibold" htmlFor="lon">
-                longitude
-              </label>
-              <input
-                step=".001"
-                type="number"
-                name="lon"
-                onChange={(e) => setLongitude(e.target.value)}
-              />
-              <input
-                className="font-semibold"
-                type="date"
-                name="date"
-                onChange={(e) => setDate(e.target.value)}
-              />
               <button
+                className="text-white hover:scale-105 self-center my-8 mx-5 px-5 py-2 bg-white-500 bg-opacity-50 rounded-full xl:text-xl border-2"
                 type="submit"
-                className="m-5 px-3 py-2 rounded-3xl bg-slate-400"
               >
                 Submit
               </button>
-              {result ? (
-                <>
-                  <h1 className="text-5xl font-semibold">{result}</h1>
-                  <img
-                    className="w-[800px] mt-5"
-                    src={`http://127.0.0.1:8000${displayImage}`}
-                    alt=""
-                  />
-                </>
-              ) : (
-                loading && <h1>loading...</h1>
-              )}
-              {/* violated DRY :[ */}
             </form>
           </>
+        ) : (
+          <div className="flex flex-col">
+            <div className="flex flex-col">
+              <form
+                className="flex items-center justify-center"
+                onSubmit={callNasaApi}
+              >
+                <label
+                  className="text-white text-2xl font-semibold mx-2"
+                  htmlFor="lat"
+                >
+                  latitude
+                </label>
+                <input
+                  className="rounded-xl p-2"
+                  step=".001"
+                  type="number"
+                  name="lat"
+                  onChange={(e) => setLatitude(e.target.value)}
+                />
+                <label
+                  className="text-2xl text-white mx-2 font-semibold"
+                  htmlFor="lon"
+                >
+                  longitude
+                </label>
+                <input
+                  className="rounded-xl p-2"
+                  step=".001"
+                  type="number"
+                  name="lon"
+                  onChange={(e) => setLongitude(e.target.value)}
+                />
+                <input
+                  className="font-semibold mx-6 rounded-xl p-2"
+                  type="date"
+                  name="date"
+                  onChange={(e) => setDate(e.target.value)}
+                />
+                <button
+                  type="submit"
+                  className="text-2xl px-3 py-2 text-white rounded-3xl bg-white-400 border-2"
+                >
+                  Submit
+                </button>
+
+                {/* violated DRY :[ */}
+              </form>
+            </div>
+          </div>
         )}
       </div>
+      {result ? (
+        <div className="flex justify-center items-center flex-col mt-5">
+          <h1 className="text-5xl text-white font-semibold">{result}</h1>
+          <img
+            className="w-[500px] mt-5"
+            src={`http://127.0.0.1:8000${displayImage}`}
+            alt=""
+          />
+        </div>
+      ) : (
+        loading && (
+          <div className="flex justify-center items-center">
+            <div class="lds-roller w-36 mx-5">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <h1 className="self-center text-white text-3xl">loading...</h1>
+          </div>
+        )
+      )}
     </div>
   );
 };
