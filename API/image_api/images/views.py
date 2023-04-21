@@ -18,8 +18,10 @@ class ImageView(APIView):
                 global image_path 
                 image_path = os.path.join(settings.MEDIA_ROOT, serializer.data["image"])
                 image_name = serializer.data["image"].split("/")[-1]
-                image_path = "/var/www/html/dev/Refactor/Planetary/API/image_api/media/images/" + image_name 
-                model  = load_model("/var/www/html/dev/Refactor/Planetary/API/image_api/models/lr_model_satellite_wildfires.h5",compile=False)
+                image_path = os.path.join(settings.MEDIA_ROOT, 'images', image_name)
+                model_name = "lr_model_satellite_wildfires.h5"
+                model_path = os.path.join(settings.BASE_DIR, 'models', model_name)
+                model  = load_model(model_path,compile=False)
                 img = image.load_img(image_path,target_size=(256,256))
                 img  = image.img_to_array(img)
                 img = np.expand_dims(img,axis=0)
