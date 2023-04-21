@@ -1,0 +1,4 @@
+media/images/**/*.jpg
+media/images/**/*.png
+media/images/**/*.gif
+models/**/*.h5
