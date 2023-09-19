@@ -8,7 +8,7 @@ export default function Asteroid() {
   async function getAsteroid() {
     try {
       const response = await axios.get(
-        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=HGgzNs8K2j8VrmMgNshhbbf4w1QYkKTUng0oBA5v`
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=ifAHb64rK915Dh2PmimBXrjt9dfmgRlsavYJSEbY`
       );
       const { near_earth_objects } = response.data; 
       let arr = []
@@ -63,7 +63,7 @@ return (
         <div className="flex justify-center mt-8">
             {
                 startDate!=="" && endDate!=="" ? 
-                (<button onClick={getAsteroid} className="h-20 hover:scale-105 text-white mx-1 xl:mx-5 border-2 font-semibold border-white rounded-3xl text-xl xl:text-3xl px-5 py-2" >Get Asteroid Data</button>)
+                (<button onClick={getAsteroid} className="h-20 hover:scale-105 text-white mx-1 xl:mx-5 border-2 font-semibold border-black bg-slate-100 text-black rounded-3xl text-xl xl:text-3xl px-5 py-2" >Get Asteroid Data</button>)
                 :
                 (<></>)
             }
