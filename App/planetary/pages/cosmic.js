@@ -36,7 +36,7 @@ export default function Cosmic(){
     <div className=" flex flex-col w-screen">
     <div className="flex justify-center mt-5">
     <input className="xl:px-5 h-20 rounded-3xl mx-1 text-xl xl:mx-5 xl:text-5xl" type="date" onChange={handleChange}></input>
-    <button onClick={giveDOB} className="h-20 hover:scale-105 text-white mx-1 xl:mx-5 border-2 font-semibold border-white rounded-3xl text-xl xl:text-3xl px-5 py-2" >Submit Date</button>
+    <button onClick={giveDOB} className="h-20 hover:scale-105 bg-slate-100 text-gray mx-1 xl:mx-5 border-2 font-semibold border-black rounded-3xl text-xl xl:text-3xl px-5 py-2" >Submit Date</button>
     </div>
         <div className="flex bg-black rounded-3xl border-4 mt-10 self-center border-white xl:w-[1280px] xl:h-[650px] w-[300px] h-[600px]">
         <div className="flex p-5">
