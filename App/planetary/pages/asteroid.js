@@ -33,7 +33,7 @@ const handleEndChange = (f) => {
     setEndDate(f.target.value);
 };
 return (
-    <div className="h-screen bg-contain  bg-[url('../public/stars.jpg')] overflow-x-hidden">
+    <div className="h-screen bg-contain  bg-black overflow-x-hidden">
       <Navbar />
       <div className=" flex flex-col w-screen ">
         <div className="flex  justify-center">
