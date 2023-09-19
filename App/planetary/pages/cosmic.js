@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar"
 import { useState } from "react";
 import Image from "next/image";
+import bgimg from "@/public/stars.jpg";
 const axios = require('axios');
 export default function Cosmic(){  
     const [imgurl,setImgurl] = useState('')
@@ -31,7 +32,7 @@ export default function Cosmic(){
      }
 
     return(
-<div className="h-screen bg-[url('../public/stars.jpg')] bg-contain ">
+<div className="h-screen bg-[bgimg] bg-contain ">
     <Navbar/>
     <div className=" flex flex-col w-screen">
     <div className="flex justify-center mt-5">
