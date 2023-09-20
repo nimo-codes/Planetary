@@ -30,7 +30,6 @@ export default function Cosmic(){
      const handleChange = (e)=>{
         setDate(e.target.value);
      }
-
     return(
 <div className="h-screen bg-[bgimg] bg-contain ">
     <Navbar/>

@@ -10,7 +10,7 @@ const wildfire = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const apiKey = "HGgzNs8K2j8VrmMgNshhbbf4w1QYkKTUng0oBA5v";
+  const apiKey = "ifAHb64rK915Dh2PmimBXrjt9dfmgRlsavYJSEbY";
   // const [thumbnailUrl, setThumbnailUrl] = useState();
   const url = "http://127.0.0.1:8000/api/";
   const options = [

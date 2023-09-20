@@ -14,7 +14,7 @@ export default function Landing() {
     router.push('/wildfire')
 }
   return (
-    <div className=" bg-[url('../public/stars.jpg')] h-full pt-16 w-full relative bg-contain">
+    <div className=" bg-[url('../../git public/stars.jpg')] h-full pt-16 w-full relative bg-contain">
       <div className="flex flex-col">
         <div className="flex">
 

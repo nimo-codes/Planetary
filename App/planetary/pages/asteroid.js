@@ -10,7 +10,7 @@ export default function Asteroid() {
       const response = await axios.get(
         `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=ifAHb64rK915Dh2PmimBXrjt9dfmgRlsavYJSEbY`
       );
-      const { near_earth_objects } = response.data; 
+      const{near_earth_objects} = response.data; 
       let arr = []
       let newarr=[]
       let numsarr=[]
